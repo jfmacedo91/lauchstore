@@ -16,8 +16,8 @@
   },
   "scripts": {
     "start": "node src/server.js",
-    "nodemom": "nodemon src/server.js",
-    "browsersync": "browser-sync start --porxy http://localhost:4000 --files 'public,src/app/views",
+    "nodemon": "nodemon src/server.js",
+    "browsersync": "browser-sync start --proxy http://localhost:4000 --files 'public,src/app/views'",
     "dev": "npm-run-all -p nodemon browsersync"
   },
   "keywords": [],

@@ -1,8 +1,8 @@
 const express = require('express')
-const rountes = express.Router()
+const routes = express.Router()
 
-rountes.get('/', (req, res) => {
-  return res.send('ok')
+routes.get('/', (req, res) => {
+  return res.render('layout.njk')
 })
 
 module.exports = routes
