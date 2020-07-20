@@ -1,0 +1,57 @@
+<div class="item">
+  <label for="category_id">Categoria</label>
+  <select name="category_id" id="category_id">
+    {% for category in categories %}
+      <option 
+        value="{{ category.id }}"
+        {% if product.category_id == category.id %}
+          selected
+        {% endif %}>
+        {{ category.name }}
+      </option>
+    {% endfor %}
+  </select><!--category-->
+</div><!--item-->
+
+<div class="item">
+  <label for="name">Nome</label>
+  <input type="text" name="name" id="name" value="{{ product.name }}">
+</div><!--item-->
+
+<div class="item">
+  <label for="description">Descrição</label>
+  <textarea name="description" id="description">{{ product.description }}</textarea>
+</div><!--item-->
+
+{# CAMPO DE FOTO #}
+
+<div class="item">
+  <label for="price">Valor</label>
+  <input type="text" name="price" id="price" value="{{ product.price }}"> {# mascara de dinheiro #}
+
+  {% if product.old_price %}
+    <input type="hidden" name="old_price" value="{{ product.old_price }}">
+  {% endif %}
+</div><!--item-->
+
+<div class="item">
+  <label for="quantity">Quantidade</label>
+  <input type="text" name="quantity" id="quantity" value="{{ product.quantity }}">
+</div><!--item-->
+
+{% if product.status %}
+  <div class="item">
+    <label>Disponível?</label>
+    <div class="status">
+      <input type="radio" name="status" id="s1" value="1"
+        {% if product.status == '1' %} checked {% endif %}
+      >
+      <label for="s1">Sim</label>
+
+      <input type="radio" name="status" id="s0" value="0"
+        {% if product.status == '0' %} checked {% endif %}
+      >
+      <label for="s0">Não</label>
+    </div><!--status-->
+  </div><!--item-->
+{% endif %}
