@@ -7,7 +7,9 @@ routes.get('/', (req, res) => {
 })
 
 routes.get('/products/create', productController.create)
+routes.post('/products', productController.post)
 
+// Alias (Atalhos)
 routes.get('/ads/create', (req, res) => {
   return res.render('/products/create')
 })
