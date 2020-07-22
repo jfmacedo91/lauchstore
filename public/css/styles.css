@@ -2,8 +2,9 @@
 
 :root {
   --primary-color: #FD951F;
-  --secondary-color: #007CB2;
+  --secondary-color: #00B27C;
   --text-color: #FFFFFF;
+  --delte-color: #FD5959;
 }
 
 * {
@@ -48,7 +49,15 @@ body {
 }
 
 .button:hover {
-  background-color: #D7780B;
+  filter: brightness(85%)
+}
+
+.button.edit {
+  background-color: var(--secondary-color);
+}
+
+.button.delete {
+  background-color: var(--delte-color);
 }
 
 /*** HEADER ***/
@@ -175,6 +184,10 @@ form .item select {
 form .item textarea {
   min-height: 150px;
   resize: none;
+}
+
+form .item .status label {
+  margin-right: 16px;
 }
 
 form .fields {

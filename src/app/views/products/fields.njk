@@ -27,7 +27,7 @@
 
 <div class="item">
   <label for="price">Valor</label>
-  <input type="text" name="price" id="price" value="{{ product.price }}"> {# mascara de dinheiro #}
+  <input type="text" name="price" id="price" value="{{ product.price }}" onkeydown="Mask.apply(this, 'formatBRL')">
 
   {% if product.old_price %}
     <input type="hidden" name="old_price" value="{{ product.old_price }}">
@@ -39,7 +39,7 @@
   <input type="text" name="quantity" id="quantity" value="{{ product.quantity }}">
 </div><!--item-->
 
-{% if product.status %}
+{% if (product.status == '0') or (product.status == '1') %}
   <div class="item">
     <label>Disponível?</label>
     <div class="status">
