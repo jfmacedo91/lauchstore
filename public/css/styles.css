@@ -455,3 +455,48 @@ form .item #photos-preview img {
   font-size: 24px;
   font-weight: 400;
 }
+
+/* *** SEARCH PAGE *** */
+.search-products {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  margin-top: 48px;
+}
+
+.search-products .header {
+  margin-bottom: 48px;
+  color: var(--secondary-color);
+}
+
+.search-products .header h2 {
+  margin-bottom: 8px;
+  font-size: 28px;
+  text-transform: capitalize;
+}
+
+.search-products .header p {
+  font-size: 16px;
+  color: var(--text-color);
+  filter: opacity(0.5);
+}
+
+.search-products nav h4 {
+  margin-bottom: 16px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+
+.search-products nav ul li {
+  margin: 4px 0;
+}
+
+.search-products nav ul li a {
+  color: var(--text-color);
+  filter: opacity(0.5);
+}
+
+.search-products nav ul li a:hover {
+  font-weight: 500;
+  filter: opacity(1);
+}
